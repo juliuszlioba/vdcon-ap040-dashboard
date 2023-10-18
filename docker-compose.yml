@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  astro-build:
+    container_name: computer-dashboard
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 80:8080
