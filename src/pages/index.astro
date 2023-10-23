@@ -1,7 +1,10 @@
 ---
+import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
-import { Button } from "@/components/ui/button";
 import { FileText } from "lucide-astro";
+
+import liefercheinImg from "@/assets/images/Lieferchein.jpg";
+import c724websiteImg from "@/assets/images/c724Website.jpg";
 ---
 
 <Layout title="Julius Computer">
@@ -19,12 +22,31 @@ import { FileText } from "lucide-astro";
         <p class="font-semibold">Julius Computer</p>
       </div>
     </div>
-    <div class="space-y-4 grow flex items-center justify-center">
-      <a href="http://vdcon-ap040:3001" target="_blank">
-        <Button className="flex gap-2 items-center">
-          Hausbrot Gourmet Lieferschein <FileText size={20} strokeWidth={1.5} />
-        </Button>
-      </a>
+    <div class="grow flex items-center justify-center gap-4 flex-wrap">
+      <div
+        class="w-64 overflow-hidden bg-primary rounded-md hover:bg-secondary border-2 border-neutral-900 hover:border-primary"
+      >
+        <a href="http://vdcon-ap040:3001" target="_blank" class="">
+          <Image src={liefercheinImg} alt="Hausbrot Gourmet Lieferschein" />
+          <h3 class="flex gap-2 items-center justify-center p-3">
+            HBR Gourmet Lieferschein <FileText size={20} strokeWidth={1.5} />
+          </h3>
+        </a>
+      </div>
+      <div
+        class="w-64 overflow-hidden bg-primary rounded-md hover:bg-secondary border-2 border-neutral-900 hover:border-primary"
+      >
+        <a
+          href="http://vdcon-ap040:3002"
+          target="_blank"
+          class="w-64 overflow-hidden bg-primary rounded-md"
+        >
+          <Image src={c724websiteImg} alt="c724 new Website" />
+          <h3 class="flex gap-2 items-center justify-center p-3">
+            c724 Website <FileText size={20} strokeWidth={1.5} />
+          </h3>
+        </a>
+      </div>
     </div>
   </main>
 </Layout>
