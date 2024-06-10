@@ -1,9 +1,10 @@
 ---
 import { Image } from "astro:assets";
-import Layout from "../layouts/Layout.astro";
-import { FileText, Hammer } from "lucide-astro";
+import Layout from "../../layouts/Layout.astro";
+import { FileText, Home } from "lucide-astro";
 
-import c724websiteImg01 from "@/assets/images/c724Website.jpg";
+import liefercheinImg01 from "@/assets/images/Lieferchein.jpg";
+import liefercheinImg02 from "@/assets/images/Lieferchein2.jpg";
 import { Button } from "@/components/ui/button";
 ---
 
@@ -26,16 +27,28 @@ import { Button } from "@/components/ui/button";
       <div
         class="w-64 overflow-hidden rounded-md border-2 border-neutral-900 bg-primary hover:border-primary hover:bg-secondary"
       >
-        <a href="http://vdcon-ap040:85" target="_blank" class="">
-          <Image src={c724websiteImg01} alt="c724 Website" loading={"eager"} />
+        <a href="http://vdcon-ap040:3001" target="_blank" class="">
+          <Image src={liefercheinImg01} alt="Hausbrot Gourmet Lieferschein" loading={"eager"} />
           <h3 class="flex items-center justify-center gap-2 p-3">
-            c724 Website Refresh <FileText size={20} strokeWidth={1.5} />
+            Gourmet Lieferschein <FileText size={20} strokeWidth={1.5} />
+          </h3>
+        </a>
+      </div>
+
+      <div
+        class="w-64 overflow-hidden rounded-md border-2 border-neutral-900 bg-primary hover:border-primary hover:bg-secondary"
+      >
+        <a href="http://vdcon-ap040:3002" target="_blank" class="">
+          <Image src={liefercheinImg02} alt="Hausbrot Gourmet Lieferschein" loading={"eager"} />
+          <h3 class="flex items-center justify-center gap-2 p-3">
+            ÖJK Lieferschein <FileText size={20} strokeWidth={1.5} />
           </h3>
         </a>
       </div>
     </div>
-    <a href="/tools">
-      <Button className="gap-2"> <Hammer strokeWidth={1} /> Tools </Button>
+
+    <a href="/">
+      <Button className="gap-2"> <Home strokeWidth={1} /> Home </Button>
     </a>
   </main>
 </Layout>
