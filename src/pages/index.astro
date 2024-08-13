@@ -4,6 +4,7 @@ import Layout from "../layouts/Layout.astro";
 import { FileText, Hammer } from "lucide-astro";
 
 import c724websiteImg01 from "@/assets/images/c724Website.jpg";
+import profileImg from "@/assets/images/profile_200x200.jpg";
 import { Button } from "@/components/ui/button";
 ---
 
@@ -12,11 +13,7 @@ import { Button } from "@/components/ui/button";
     <div class="flex w-full items-center justify-between rounded-md bg-neutral-900 p-4">
       <h1 class="text-xl font-semibold">http://vdcon-ap040</h1>
       <div class="flex items-center gap-2">
-        <img
-          src="https://lh3.googleusercontent.com/ogw/AKPQZvw9X18rGI39iQUBntMs9x_ijE04EKg2zDxb7i5eMA=s32-c-mo"
-          alt="Julius Zlioba"
-          class="rounded-full"
-        />
+        <Image src={profileImg} alt="Julius Zlioba" class="size-8 rounded-full" />
         <p class="font-semibold">Julius Computer</p>
       </div>
     </div>
